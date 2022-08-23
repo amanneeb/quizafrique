@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="../css/styles_pays.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <a href="../index.html"><img class="logo" src="../images/cartes/africa.svg" alt="home"></a>
+                <fieldset class="fld_cardinaux">
+                    <div>
+                        <input type="radio" name="cardinaux" value="Afrique du nord" id="nord">
+                        <label for="nord">Nord</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cardinaux" value="Afrique australe" id="sud">
+                        <label for="sud">Sud</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cardinaux" value="Afrique de l'est" id="est">
+                        <label for="est">Est</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cardinaux" value="Afrique de l'ouest" id="ouest">
+                        <label for="ouest">Ouest</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cardinaux" value="Afrique centrale" id="centre">
+                        <label for="centre">Centre</label>
+                    </div>
+                </fieldset>
+            </div>
+            <h1 class="localisation"></h1>
+            <p class="legendePhoto"></p>
+            <p class="referencePhoto"></p>
+        <!--    <button class="btn_gauche" type="button"><img class="gauche" src="../images/triangle_left.svg" alt="image précédente"></button>
+            <button class="btn_droit" type="button"><img class="droite" src="../images/triangle_right.svg" alt="image suivante"></button>  -->
+        </header>
+        <main>
+            <div class="explication">
+                <p>
+                    Ici tu trouveras toutes les fiches informatives concernant les 54 pays africains. 
+                    Pour trouver ce que tu cherches: 
+                </p>
+                <ol>
+                    <li>
+                        D'abord, choisis une zone géographique en haut de l'écran. 
+                    </li>
+                    <li>
+                        Ensuite, sélectionne un pays parmi la liste des pays de la zone géographique précédemment sélectionnée.
+                    </li>
+                </ol>
+                <p>
+                    Profites en bien! &#128521;
+                </p>
+            </div>         
+            <fieldset class="fld_select">
+                <label>Choisir un pays d'<span class="zone"></span></label>
+                <select class="listeDeroulante"></select>
+            </fieldset>
+            <div class="infoPays">
+                <div class="ctn_pays_drapeau">
+                    <img class="drapeau" src="" alt="" >
+                    <h2 class="pays"></h2>
+                    <img class="carte" src="" alt="">
+                </div>
+                <div class="ctn_info" >
+                    <p class="capitale">Capitale: <span class="spanCapitale"></span></p>
+                    <p class="villesSecondaires">Ville(s) secondaire(s): <span class="spanVillesSecondaires"></span></p>
+                    <p class="population">Population: <span class="spanPopulation"></span> hab</p>
+                    <p class="langues">Langues: <span class="spanLangues"></span></p>
+                    <p class="monnaie">Monnaie: <span class="spanMonnaie"></span></p>
+                    <p class="description">Description: <span class="spanDescription"></span></p>
+                    <p class="sources">Sources: <span class="spanSources"></span></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2022 - Anaïs Mannée-Batschy | Quiz Afrique</p>
+        </footer>
+    </body>
+    <script src="../js/JSON.js"></script>
+    <script src="../js/pays.js"></script>
+</html>

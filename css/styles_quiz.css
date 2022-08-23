@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+:root{
+    color: #1d150b;
+
+}
+html{
+    height: fit-content;
+    height: 100vh;
+    font-family: "Poppins", "Tahoma", sans-serif;
+}
+@media(min-width: 400px){
+    html{
+        height: 100vh;
+    }
+}
+
+body{
+    margin: 0;
+    background-image: url(../images/paysage_arbres.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 21, 11, 0.8);
+}
+.logo{
+    width: 50px;
+}
+a:link,
+a:visited{
+    color: inherit;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    font-style: normal;
+    text-decoration: underline;
+}
+a:active{
+    font-size: 1.2em;
+}
+h1{
+    flex: 1 0 100%;
+    font-family: "Satisfy", "fantasy";
+}
+.mainQuiz{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+}
+@media(min-width: 600px){
+    .mainQuiz{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        width: 600px;
+    }
+}
+.ctnListe{
+    width: 75%;
+    background-color: rgb(255, 255, 255, .8);
+    border-radius: 0px 0px 15% 15%;
+    margin: 1em;
+    display: none;
+}
+@media(min-width: 600px){
+    .ctnListe{
+        width: 50%;
+        height: 400px;
+    }
+}
+
+/* LISTE DE PAYS*/
+.ctnListe p{
+    text-transform: uppercase;
+    text-align: center;
+}
+.listePays{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.listePays li{
+    flex: 0 1 15%;
+}
+.listePays li{
+    color: inherit;
+}
+
+/* QUIZ */
+.ctnQuiz{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .8);
+    width: 80%;
+}
+@media(min-width: 600px){
+    .ctnQuiz{
+        justify-content: flex-start;
+        width: 400px;
+        padding: 0px 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.btnLancerJeu{
+    margin-bottom: 5px;
+}
+
+/* EN-TÊTE */
+.titreQuiz{
+    text-transform: uppercase;
+    display: none;
+}
+
+/* PARTIE: INDICE ET RETROACTION */
+.ctnFormRetro{
+    display: none;
+}
+.form{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.indice{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.ctnReponse{
+    align-self: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.reponse{
+    background-color: rgba(255, 255, 255, 0.808);
+    width: 70%;
+    height: 2.5em;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+.reponse:focus{
+    border: none;
+}
+.avertissement{
+    font-size: .6em;
+}
+
+/* PARTIE: QUESTION SUIVANTE */
+.sectionSuivant{
+    display: none;
+}
+
+/* PARTIE: SCORE */
+.sectionScore{
+    display: none; /*display:flex avec JS*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionScore p{
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+
+/* Apparence des boutons */
+button{
+    background-color: #1d150b;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+}
+button:hover{
+    text-decoration: underline;
+}
+button:active{
+    padding: .5em;
+}
+button:disabled{
+    background-color: #103d2b;
+    color: #1d150b;
+    text-decoration: line-through;
+    padding: .5em;
+}
+@media(min-width: 400px){
+    button{
+        font-size: .9em;
+        padding: .7em;
+    }
+}
+
+/*Pied de page*/
+footer{
+    background-color: rgb(255, 210, 0, .8);
+}
+footer p{
+    margin: 0;
+    text-align: center;
+}
+footer a:link,
+footer a:visited{
+    color: #1d150b;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer a:active{
+    font-weight: bolder;
+}

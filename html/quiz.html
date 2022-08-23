@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/styles_quiz.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="../index.html"><img class="logo" src="../images/cartes/africa.svg" alt="home"></a>
+            </div>
+        </header>
+        
+        <main class="mainQuiz">
+            <section class="ctnListe">
+                <p>Réponses</p>
+                <ol class="listePays"></ol>
+            </section>
+
+            <section class="ctnQuiz">
+                <div class="instructions">
+                    <p>Bienvenue! <br>
+                        Prends quelques secondes pour lire les instructions et tu pourras ensuite commencer le test. 
+                        </p>
+                        <ol>
+                            <li>Clique sur le bouton "Lancer le jeu".</li>
+                            <li>L'indice du premier pays s'affichera. Entre ta réponse et appuie sur le bouton "Répondre" pour voir si tu as la bonne réponse.</li>
+                            <li> Accède à la prochaine question en appuyant sur le bouton portant le numéro de la question suivante.</li>
+                            <li> Une fois les dix questions répondues, ton résultat s'affichera</li>
+                            <li> Si tu souhaites commencer une nouvelle partie, appuie sur le bouton "Nouvelle partie".</li>
+                        </ol>
+                        <p>Besoin d'u petit coup de pouce? Tu peux ouvrir la page <a class="lienPays" href="">"Pays"</a> pour t'aider.</p>
+                        <p>Amuse-toi bien! &#128521;</p>
+                    </div>              
+                <h2 class="titreQuiz">Question <span class="numQuestion"></span></h2>
+                <img class="indiceDrapeau" src="" alt="drapeau pays" hidden>
+                <button type="button" class="btnLancerJeu">Lancer le jeu</button>            
+
+                <div class="ctnFormRetro">
+                    <form class="form">
+                        <p class="indice"></p>
+                        <div class="ctnReponse">
+                            <input type="text" class="reponse">
+                            <button type="button" class="btnRepondre">Répondre</button>
+                        </div>
+                        <p class="avertissement"> * Le correcteur est sensible au accent</p>
+                    </form>
+                    <p class="retroaction"></p>
+                </div>
+
+                <section class="sectionSuivant">
+                    <button type="button" class="btnQuestionSuivante">Question <span class="numProchaineQuestion"></span></button>
+                </section>
+
+                <section class="sectionScore">
+                    <h2>Voici ton résultat</h2>
+                    <p><span class="score"></span>/10</p>
+                    <p class="commentaire"></p>
+                    <button type="button" class="btnRelancer">Nouvelle partie</button>
+                </section>
+            </section>    
+        </main>
+        <footer>
+            <p>© 2022 - Anaïs Mannée-Batschy | Quiz Afrique</p> 
+            <p>Photo by <a href="https://unsplash.com/@kt2080?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">katsuma tanaka</a> on <a href="https://unsplash.com/s/photos/africa-desert?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+        </footer>
+    </body>
+    <script src="../js/JSON.js"></script>
+    <script src="../js/quiz.js"></script>
+</html>
