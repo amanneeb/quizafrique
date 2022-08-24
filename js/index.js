@@ -5,7 +5,7 @@
 */
 
 function ouvrirQuiz(){
-    window.open("../html/quiz.html", "_blank")
+    window.open("../html/quiz.html")
 };
 
 document.querySelector(".btnQuiz").addEventListener("click", function(){
