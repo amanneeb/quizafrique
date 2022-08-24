@@ -1,16 +1,19 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Caramel&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 :root{
-    color: #1d150b;
-    
+    color: #1d150b;   
 }
 
 html{
     height: fit-content;
     font-family: "Poppins", "Tahoma", sans-serif;
+}
+@media(min-width: 400px){
+    html{
+        height: 100vh;
+    }
 }
 
 body{
@@ -22,21 +25,22 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: flex-start;
+    align-items: center;
 }
 @media(min-width: 400px){
     body{
-        height: 700px;
     }
 }
 header{
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
 }
 div{
+    align-self: stretch;
     background-color: rgb(29, 21, 11, .8);
 }
 div img{
@@ -53,11 +57,14 @@ h1{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
 }
-@media(min-width: 400px){
+@media(min-width: 600px){
     main{
+        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-end;
@@ -66,7 +73,7 @@ main{
 section{
     border: #1d150b solid 1px;
     background-color: #ffd200;
-    height: 200px;
+    /*height: 50%;*/
     width: 80%;
     display: flex;
     flex-direction: column;
