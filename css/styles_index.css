@@ -110,6 +110,7 @@ button{
     color: white;
     text-transform: uppercase;
     padding: 1em;
+    font-size: 2em;
 }
 button:hover{
     text-decoration: underline;
