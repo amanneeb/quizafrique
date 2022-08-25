@@ -7,12 +7,13 @@
 }
 
 html{
-    height: fit-content;
     font-family: "Poppins", "Tahoma", sans-serif;
     background-image: url(../images/globe_afrique.jpg);
     background-position: center;
-    /*background-size: cover;*/
+    background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
 }
 @media(min-width: 400px){
     html{
@@ -22,10 +23,6 @@ html{
 
 body{
     margin: 0;
-    /*background-image: url(../images/globe_afrique.jpg);
-    background-position: center;
-    /*background-size: cover;
-    background-repeat: no-repeat;*/
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -42,19 +39,26 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    flex: 0 1 20%;
 }
 div{
     align-self: stretch;
     background-color: rgb(29, 21, 11, .8);
+    height: 50%;
+    position: relative;
+}
+div a{
+    position: relative;
 }
 div img{
-    width: 50px;
+    width: 150px;
 }
 h1{
     color: #1d150b;
     background-color: rgb(255, 255, 255, .8);
     align-self: center;
-    margin: 40px 0px;
+    font-size: 3em;
+    margin: .5em 0px;
     /*text-transform: uppercase;*/
     padding: .8em;
 }
@@ -62,9 +66,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    width: 50%;
+    /*flex: 1 0 70%;*/
 }
 @media(min-width: 600px){
     main{
@@ -77,13 +81,11 @@ main{
 section{
     border: #1d150b solid 1px;
     background-color: #ffd200;
-    /*height: 50%;*/
-    width: 80%;
+    flex: 1 0 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2em auto;
 }
 @media(min-width: 400px){
     section{
@@ -91,8 +93,12 @@ section{
         width: 300px;
     }
 }
+main section:first-child{
+    margin-bottom: 5em;
+}
 p{
     text-align: center;
+    font-size: 2em;
 }
 @media(min-width: 700px){
     p{
@@ -131,10 +137,15 @@ footer{
     background-color: rgb(255, 210, 0, .7);
     padding: 3px 0px;
     align-self: stretch;
+    flex: 0 1 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 footer p{
     margin: 0;
-    font-size: .8em;
+    font-size: 2em;
 }
 p a:link,
 p a:visited{
