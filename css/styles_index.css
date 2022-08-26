@@ -11,9 +11,13 @@ html{
     background-image: url(../images/globe_afrique.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-clip: content-box;
-    
+    background-repeat: no-repeat; 
+}
+@media(min-width: 600px){
+    html{
+        background-size:auto;
+        height: 100%;
+    }
 }
 
 body{
@@ -33,7 +37,7 @@ header{
     align-items: center;
     flex: 0 1 20%;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     header{
         flex: 0 1 10%;
     }
@@ -51,7 +55,7 @@ div a{
 div img{
     width: 150px;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     div img{
         max-height: 50px;
     }
@@ -66,7 +70,7 @@ h1{
     text-transform: uppercase;*/
     padding: .8em;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     h1{
         font-size: 3vh;
     }
@@ -76,9 +80,11 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
     
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     main{
         flex-direction: row;
         justify-content: space-around;
@@ -102,7 +108,7 @@ section{
     width: 300px;
     
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     section{
         
     }    
@@ -110,7 +116,7 @@ section{
 main section:first-child{
     margin-bottom: 5em;
 }
-@media (min-width: 500px){
+@media (min-width: 600px){
     main section:first-child{
         margin-bottom: 0;
     }
@@ -119,7 +125,7 @@ p{
     text-align: center;
     font-size: 1.3em;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     p{
         font-size: 1em;
     }
@@ -139,7 +145,7 @@ button:active{
     padding: .5em;
 }
 
-@media(min-width: 500px){
+@media(min-width: 600px){
     button{
         font-size: .9em;
         padding: .7em;
@@ -164,16 +170,16 @@ footer{
     justify-content: center;
     align-items: center;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     footer{
         padding: 0;
     }
 }
 footer p{
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1em;
 }
-@media(min-width: 500px){
+@media(min-width: 600px){
     footer p{
         font-size: .8em;
     }
