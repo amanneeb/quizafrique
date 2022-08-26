@@ -8,7 +8,6 @@
 
 }
 html{
-    height: fit-content;
     height: 100vh;
     font-family: "Poppins", "Tahoma", sans-serif;
 }
@@ -57,7 +56,7 @@ a:active{
 }
 h1{
     flex: 1 0 100%;
-    font-family: "Satisfy", "fantasy";
+    align-self: center;
 }
 .mainQuiz{
     display: flex;
