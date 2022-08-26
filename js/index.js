@@ -5,7 +5,7 @@
 */
 
 function ouvrirQuiz(){
-    window.open("../quizafrique/html/quiz.html")
+    window.open(".../quizafrique/html/quiz.html")
 };
 
 document.querySelector(".btnQuiz").addEventListener("click", function(){
