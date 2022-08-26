@@ -15,10 +15,6 @@ html{
     height: 100%;
     margin: 0;
 }
-@media(min-width: 400px){
-    html{
-    }
-}
 
 body{
     margin: 0;
@@ -26,12 +22,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
-@media(min-width: 400px){
-    body{
-    }
-}
+
 header{
     align-self: stretch;
     display: flex;
@@ -40,9 +33,9 @@ header{
     align-items: center;
     flex: 0 1 20%;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     header{
-        height: 1vh;
+        height: fit-content;
     }
 }
 div{
@@ -58,7 +51,7 @@ div a{
 div img{
     width: 150px;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     div img{
         max-height: 100%;
     }
@@ -69,52 +62,65 @@ h1{
     background-color: rgb(255, 255, 255, .8);
     align-self: center;
     font-size: 3em;
-    margin: .5em 0px;
-    /*text-transform: uppercase;*/
+    /*margin: .5em 0px;
+    text-transform: uppercase;*/
     padding: .8em;
-    display: block;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     h1{
         font-size: 3vh;
     }
 }
 main{
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    /*flex: 1 0 70%;*/
+    flex: 1 0 70%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     main{
-        align-self: stretch;
+        /*align-self: stretch;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: stretch;
+        align-items: stretch;*/
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        padding: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 50%;
     }
 }
 section{
     border: #1d150b solid 1px;
     background-color: #ffd200;
-    flex: 1 0 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 500px;
+    width: 500px;
+    
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     section{
-        flex: 0 1 35%;
-        height: 30vh;
-    }
+        
+    }    
 }
 main section:first-child{
     margin-bottom: 5em;
 }
-@media (min-width: 400px){
+@media (min-width: 500px){
     main section:first-child{
         margin-bottom: 0;
     }
@@ -123,7 +129,7 @@ p{
     text-align: center;
     font-size: 2em;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     p{
         font-size: 1em;
     }
@@ -143,7 +149,7 @@ button:active{
     padding: .5em;
 }
 
-@media(min-width: 400px){
+@media(min-width: 500px){
     button{
         font-size: .9em;
         padding: .7em;
@@ -168,7 +174,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     footer{
         padding: 0;
     }
@@ -177,10 +183,9 @@ footer p{
     margin: 0;
     font-size: 2em;
 }
-@media(min-width: 400px){
+@media(min-width: 500px){
     footer p{
         font-size: .8em;
-        margin: ;
     }
 }
 p a:link,
