@@ -8,6 +8,7 @@
 
 }
 html{
+    margin: 0;
     font-family: "Poppins", "Tahoma", sans-serif;
     background-image: url(../images/paysage_arbres.jpg);
     background-position: center;
@@ -16,8 +17,8 @@ html{
 }
 @media(min-width: 600px){
     html{
-        height: 100%;
         background-size: auto;
+        height: 100%;
     }
 }
 body{
@@ -140,7 +141,7 @@ h1{
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255, .8);
-    width: 80%;
+    width: 98%;
 }
 @media(min-width: 600px){
     .ctnQuiz{
@@ -161,6 +162,9 @@ h1{
     display: none;
 }
 
+.instructions p{
+    margin: auto 5px;
+}
 /* PARTIE: INDICE ET RETROACTION */
 .ctnFormRetro{
     display: none;
@@ -187,15 +191,26 @@ h1{
     background-color: rgba(255, 255, 255, 0.808);
     width: 70%;
     height: 2.5em;
-    border-left: none;
-    border-top: none;
-    border-right: none;
+    border: none;
+    border-bottom: #103d2b solid 3px;
+    margin-bottom: 1px;
 }
 .reponse:focus{
     border: none;
 }
+.reponse:disabled{
+    text-decoration: line-through;
+    color: grey;
+}
 .avertissement{
     font-size: .6em;
+}
+.retroaction{
+    font-size: .8em;
+    text-align: center;
+}
+.btnQuestionSuivante{
+    margin-bottom: 1em;
 }
 
 /* PARTIE: QUESTION SUIVANTE */
