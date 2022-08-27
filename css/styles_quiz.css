@@ -50,6 +50,18 @@ header{
         width: 50px;
     }
 }
+h1{
+    color: #1d150b;
+    background-color: rgb(255, 255, 255, .8);
+    align-self: center;
+    font-size: 3em;
+    /*margin: .5em 0px;
+    text-transform: uppercase;*/
+    text-align: center;
+    padding: .8em;
+
+}
+
 
 a:visited{
     color: inherit;

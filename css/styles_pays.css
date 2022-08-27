@@ -9,7 +9,7 @@ html{
     height: 100vh;
 }
 body{
-    margin: 0 0;
+    margin: 0;
     height: 900px;
     width: 100%;
     box-sizing: border-box;
@@ -18,11 +18,6 @@ body{
     justify-content: space-between;
     align-items: stretch;
 }
-
-/*footer{
-    background-color: #ffd200;
-    height: 2em;
-}*/
 
 /* IMAGE D'ARRIÈRE-PLAN */
 header{
@@ -64,7 +59,8 @@ header div{
 }
 .fld_cardinaux div{
     background-color: rgb(255, 255, 255, 0);
-    font-size: 1.1em;
+    font-size: 1em;
+    margin: 1em;
     width: fit-content;
 }
 .localisation{
@@ -76,13 +72,13 @@ header div{
 }
 .legendePhoto{
     position: absolute;
-    bottom: 2px;
+    bottom: 10px;
     right: 2px;
 }
 .referencePhoto{
     position: absolute;
     bottom: 2px;
-    left: 2px;
+    right: 2px;
     font-size: .7em;
 }
 a{
@@ -131,6 +127,11 @@ input[name=cardinaux]:checked+label{
     border-bottom: #ffd200 2px solid;
 }
 
+/* EXPLICATIONS */
+.explication p{
+    margin: 0 1em;
+}
+
 /* ALIGNER LA LISTE DÉROULANTE ET LES INFORMATIONS DES PAYS */
 main{
     display: flex;
@@ -146,6 +147,7 @@ main{
     justify-content: flex-end;
     align-items: flex-end;
 }
+
 
 
 
