@@ -160,9 +160,10 @@ button:hover a{
     text-decoration: underline;
 }
 
+/* Pied de page */
 footer{
     background-color: rgb(255, 210, 0, .7);
-    padding: 3px 0px;
+    padding: 6px;
     align-self: stretch;
     flex: 0 1 10%;
     display: flex;
@@ -178,10 +179,11 @@ footer{
 footer p{
     margin: 0;
     font-size: 1em;
+    text-align: center;
 }
 @media(min-width: 600px){
     footer p{
-        font-size: .8em;
+        font-size: 1em;
     }
 }
 p a:link,
