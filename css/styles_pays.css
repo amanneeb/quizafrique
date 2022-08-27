@@ -147,6 +147,10 @@ main{
     justify-content: flex-end;
     align-items: flex-end;
 }
+select{
+    height: 2em;
+    width: 250px;
+}
 
 
 
@@ -182,6 +186,9 @@ main{
 }
 .carte{
     width: 50px;
+}
+.ctn_info{
+
 }
 .sources{
     font-size: .4em;
