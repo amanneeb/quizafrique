@@ -157,7 +157,10 @@
     }
 </script>
 
-<style>
+<style scoped>
+    
+
+
     .instructions,
     .ctnFormRetro,
     .sectionScore{

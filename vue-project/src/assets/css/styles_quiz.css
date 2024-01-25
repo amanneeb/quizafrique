@@ -1,0 +1,307 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+:root{
+    color: #1d150b;
+
+}
+html{
+    margin: 0;
+    font-family: "Poppins", "Tahoma", sans-serif;
+    background-image: url(../images/paysage_arbres.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(min-width: 600px){
+    html{
+        background-size: auto;
+        height: 100%;
+    }
+}
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 21, 11, 0.8);
+    flex: 0 1 20%;
+}
+@media(min-width: 600px){
+    header{
+        flex: 0 1 10%;
+    }
+}
+
+.logo{
+    width: 150px;
+}
+@media(min-width: 600px){
+    .logo{
+        width: 50px;
+    }
+}
+h1{
+    color: #1d150b;
+    background-color: rgb(255, 255, 255, .8);
+    align-self: center;
+    font-size: 3em;
+    /*margin: .5em 0px;
+    text-transform: uppercase;*/
+    text-align: center;
+    padding: .8em;
+
+}
+
+
+a:visited{
+    color: inherit;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    font-style: normal;
+    text-decoration: underline;
+}
+a:active{
+    font-size: 1.2em;
+}
+h1{
+    flex: 1 0 100%;
+    align-self: center;
+}
+.mainQuiz{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+@media(min-width: 600px){
+    .mainQuiz{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        width: 600px;
+    }
+}
+.ctnListe{
+    width: 75%;
+    background-color: rgb(255, 255, 255, .8);
+    border-radius: 0px 0px 15% 15%;
+    margin: 1em;
+    display: none;
+}
+@media(min-width: 600px){
+    .ctnListe{
+        width: 50%;
+        height: 400px;
+    }
+}
+
+/* LISTE DE PAYS*/
+.ctnListe p{
+    text-transform: uppercase;
+    text-align: center;
+}
+.listePays{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.listePays li{
+    flex: 0 1 15%;
+}
+.listePays li{
+    color: inherit;
+}
+
+/* QUIZ */
+.ctnQuiz{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .8);
+    width: 98%;
+}
+@media(min-width: 600px){
+    .ctnQuiz{
+        justify-content: flex-start;
+        width: 400px;
+        padding: 0px 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.btnLancerJeu,
+.btnRelancer{
+    margin-bottom: 5px;
+}
+
+/* EN-TÊTE */
+.titreQuiz{
+    text-transform: uppercase;
+    display: none;
+}
+
+.instructions p{
+    margin: auto 5px;
+}
+/* PARTIE: INDICE ET RETROACTION */
+.ctnFormRetro{
+    display: none;
+}
+.form{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.indice{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.ctnReponse{
+    align-self: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.reponse{
+    background-color: rgba(255, 255, 255, 0.808);
+    width: 70%;
+    height: 2.5em;
+    border: none;
+    border-bottom: #103d2b solid 3px;
+    margin-bottom: 1px;
+    font-size: 1.2em;
+}
+.reponse:focus{
+    border: none;
+}
+.reponse:disabled{
+    text-decoration: line-through;
+    color: grey;
+}
+.avertissement{
+    font-size: .6em;
+}
+.retroaction{
+    font-size: .8em;
+    text-align: center;
+}
+.btnQuestionSuivante{
+    margin-bottom: 1em;
+}
+
+/* PARTIE: QUESTION SUIVANTE */
+.sectionSuivant{
+    display: none;
+}
+
+/* PARTIE: SCORE */
+.sectionScore{
+    display: none; /*display:flex avec JS*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionScore h2{
+    font-size: 2em;
+    font-weight: bolder;
+}
+.sectionScore p{
+    font-size: 1.8em;
+    text-align: center;
+}
+.sectionScore p:first-of-type{
+    font-size: 4em;
+}
+
+
+
+
+/* Apparence des boutons */
+button{
+    background-color: #1d150b;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+}
+button:hover{
+    text-decoration: underline;
+}
+button:active{
+    padding: .5em;
+}
+button:disabled{
+    background-color: #103d2b;
+    color: #1d150b;
+    text-decoration: line-through;
+    padding: .5em;
+}
+@media(min-width: 600px){
+    button{
+        font-size: .9em;
+        padding: .7em;
+    }
+}
+
+/*Pied de page*/
+footer{
+    background-color: rgb(255, 210, 0, .7);
+    padding: 6px;
+    align-self: stretch;
+    flex: 0 1 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width: 600px){
+    footer{
+        padding: 0;
+    }
+}
+footer p{
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+@media(min-width: 600px){
+    footer p{
+        font-size: 1em;
+    }
+}
+footer a:link,
+footer a:visited{
+    color: #1d150b;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer a:active{
+    font-weight: bolder;
+}

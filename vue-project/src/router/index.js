@@ -29,11 +29,6 @@ const router = createRouter({
       name: 'fiche',
       component: () => import('../views/FicheView.vue')
     },
-    /*{
-      path: '/fiche',
-      name: 'fiche',
-      component: () => import('../views/FicheView.vue')
-    },*/
   ]
 })
 

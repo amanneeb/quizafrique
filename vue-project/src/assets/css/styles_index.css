@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root{
+    color: #1d150b;   
+}
+
+html{
+    font-family: "Poppins", "Tahoma", sans-serif;
+    background-image: url(../images/globe_afrique.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+@media(min-width: 600px){
+    html{
+        background-size:auto;
+        height: 100%;
+    }
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+header{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 1 20%;
+}
+@media(min-width: 600px){
+    header{
+        flex: 0 1 10%;
+    }
+}
+div{
+    align-self: stretch;
+    background-color: rgb(29, 21, 11, .8);
+    height: 50%;
+    position: relative;
+}
+div a{
+    position: relative;
+}
+
+div img{
+    width: 150px;
+}
+@media(min-width: 600px){
+    div img{
+        max-height: 50px;
+    }
+}
+
+h1{
+    color: #1d150b;
+    background-color: rgb(255, 255, 255, .8);
+    align-self: center;
+    font-size: 3em;
+    /*margin: .5em 0px;
+    text-transform: uppercase;*/
+    padding: .8em;
+}
+@media(min-width: 600px){
+    h1{
+        font-size: 3vh;
+    }
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    
+}
+@media(min-width: 600px){
+    main{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        padding: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        height: 50%;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+}
+section{
+    border: #1d150b solid 1px;
+    background-color: #ffd200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    
+}
+@media(min-width: 600px){
+    section{
+        
+    }    
+}
+main section:first-child{
+    margin-bottom: 5em;
+}
+@media (min-width: 600px){
+    main section:first-child{
+        margin-bottom: 0;
+    }
+}
+p{
+    text-align: center;
+    font-size: 1.3em;
+}
+@media(min-width: 600px){
+    p{
+        font-size: 1em;
+    }
+}
+button{
+    background-color: #1d150b;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 1.3em;
+    margin: .3em .5em 1.5em .5em;
+}
+button:hover{
+    text-decoration: underline;
+}
+button:active{
+    padding: .5em;
+}
+
+@media(min-width: 600px){
+    button{
+        font-size: .9em;
+        padding: .7em;
+    }
+}
+button a:link,
+button a:visited{
+    color: white;
+    text-decoration: none;
+}
+button:hover a{
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer{
+    background-color: rgb(255, 210, 0, .7);
+    padding: 6px;
+    align-self: stretch;
+    flex: 0 1 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width: 600px){
+    footer{
+        padding: 0;
+    }
+}
+footer p{
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+@media(min-width: 600px){
+    footer p{
+        font-size: 1em;
+    }
+}
+p a:link,
+p a:visited{
+    color: #1d150b;
+    text-decoration: none;
+}
+p a:hover{
+    text-decoration: underline;
+}
+p a:active{
+    font-weight: bolder;
+}
