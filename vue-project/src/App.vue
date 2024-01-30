@@ -5,10 +5,9 @@ import Footer from './components/Footer.vue'
 
 <template>
   <header>
-  <!-- <img alt="Vue logo" class="logo" src="@/assets/logo_afrique.svg" width="125" height="125" /> -->
     <div class="wrapper">
       <nav>
-        <RouterLink to="/"><img alt="Vue logo" class="logo" src="@/assets/logo_afrique.svg" width="125" height="125" /></RouterLink>
+        <RouterLink to="/"><img alt="Vue logo" class="logo" src="@/assets/logo_afrique.svg" width="25" height="25" /></RouterLink>
       </nav>
       <RouterLink to="/pays">Pays</RouterLink>
       <RouterLink to="/quiz">Quiz</RouterLink>
@@ -20,7 +19,7 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style scoped>
-header {
+/*header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -80,5 +79,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+}*/
 </style>

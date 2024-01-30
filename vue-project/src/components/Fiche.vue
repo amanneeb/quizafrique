@@ -3,16 +3,19 @@
 </script>
 
 <template>
-    <main>
-        <img class="zone" src="@/assets/images/afrique_centre.jpg" width="300px" alt="">
-        <section>
-            <nav>
-                <ul>
-                    <li><button @click="creerListePaysZone('Nord')" >Nord</button></li>
-                    <li><button @click="creerListePaysZone('Ouest')" >Ouest</button></li>
-                    <li><button @click="creerListePaysZone('Centre')" >Centre</button></li>
-                    <li><button @click="creerListePaysZone('Est')" >Est</button></li>
-                    <li><button @click="creerListePaysZone('Sud')" >Sud</button></li>
+    <main class="mainFiche">
+        <figure class="imageZone">
+            <img class="zone" src="@/assets/images/afrique_centre.jpg" width="300px" alt="">
+            <figcaption class="imageZone__source"></figcaption>
+        </figure>
+        <section class="ctn_fiche">
+            <nav class="nav">
+                <ul class="zoneGeo">
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Nord')" >Nord</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Ouest')" >Ouest</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Centre')" >Centre</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Est')" >Est</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Sud')" >Sud</button></li>
                 </ul>
             </nav>
             <div>
@@ -79,7 +82,10 @@
                 if(this.pays[intCptDeroulant].zone.toLowerCase() === this.zoneEnvoyee){
                     document.querySelector(".listeDeroulante").innerHTML += `<option value='${[intCptDeroulant]}'> ${this.pays[intCptDeroulant].nom}</option>`;
                 }
-            }                        
+            }  
+            document.getElementById("app").removeAttribute("class");
+            localStorage.setItem("background", "vide");
+            document.getElementById("app").classList.add(localStorage.getItem("background"))                      
         },
         methods: {
             modifierValeurPays(){

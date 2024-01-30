@@ -38,7 +38,9 @@
             }
         },
         mounted() {
-                        
+            document.getElementById("app").removeAttribute("class"),
+            localStorage.setItem("background", "vide")
+            document.getElementById("app").classList.add(localStorage.getItem("background"))
         },
         methods: {
             

@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+* {
+  font-family: "Manjari", "sans-serif";
+}
+
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+html body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+html body #app {
+  width: 100vw;
+  /*background-image: url("/src/assets/images/globe_afrique.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  html body #app {
+    height: 100vh;
+  }
+}
+html body .globe {
+  background-image: url("/src/assets/images/globe_afrique.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+html body .vide {
+  height: fit-content;
+}
+
+button {
+  background-color: #3B1F1C;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border: none;
+}
+button:hover {
+  text-decoration: underline;
+}
+button:active {
+  text-decoration: none;
+  font-weight: bold;
+}
+button:focus {
+  border: solid #fff 1px;
+  outline: solid #fff 1px;
+  outline-offset: -3px;
+  font-weight: bold;
+}
+button:disabled {
+  background-color: #674946;
+  background-color: #fff;
+  color: #3B1F1C;
+  border: #3B1F1C solid 1px;
+  text-decoration: line-through;
+}
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.accueil .test,
+.accueil .pays {
+  background-color: #FFD000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 0.5em auto;
+  padding: 0.3em;
+}
+@media (min-width: 600px) {
+  .accueil .test,
+  .accueil .pays {
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin: auto 0.5em;
+  }
+}
+.accueil .test__p,
+.accueil .pays__p {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.accueil .test button,
+.accueil .pays button {
+  background-color: #3B1F1C;
+  padding: 10px 10px;
+  border: none;
+}
+.accueil .test button a,
+.accueil .pays button a {
+  color: #fff;
+}
+
+.zone {
+  background: rgba(255, 255, 255, 0.6941176471);
+  color: #3B1F1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .zone {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.zone section {
+  border: #3B1F1C solid 1.5px;
+  aspect-ratio: 1/1;
+  position: relative;
+  width: 50%;
+  margin: 0.5em 0.5em;
+}
+@media (min-width: 600px) {
+  .zone section {
+    width: 30%;
+    aspect-ratio: 1/1;
+  }
+}
+.zone section img {
+  max-width: 100%;
+  display: block;
+}
+.zone section img:hover + div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.zone section div {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;*/
+}
+@media (min-width: 600px) {
+  .zone section div {
+    width: 0;
+    height: 0;
+    display: none;
+    background-color: rgba(255, 208, 0, 0.2784313725);
+  }
+}
+@media (min-width: 600px) {
+  .zone section img:hover + div {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.zone .titre {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mainQuiz {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.7960784314);
+  padding: 1em 1em;
+}
+@media (min-width: 600px) {
+  .mainQuiz {
+    height: 60%;
+    margin: auto auto;
+    padding: 2em 2em;
+  }
+}
+.mainQuiz section {
+  width: 100%;
+}
+.mainQuiz .instructions h1 {
+  text-align: center;
+}
+.mainQuiz .instructions .btnLancerJeu {
+  margin: auto auto;
+}
+.mainQuiz .ctnFormRetro {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.mainQuiz .ctnFormRetro h2 {
+  text-transform: uppercase;
+}
+.mainQuiz .ctnFormRetro .ctnReponse input {
+  margin-bottom: 0.5em;
+  height: 45px;
+  text-transform: uppercase;
+  width: 90%;
+  border: none;
+  border-bottom: #3B1F1C solid 2px;
+  background-color: transparent;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .mainQuiz .ctnFormRetro .ctnReponse input {
+    height: 2em;
+    width: 40%;
+  }
+}
+.mainQuiz .ctnFormRetro .ctnReponse .avertissement {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0 0.3em 0;
+  font-size: 0.8em;
+}
+.mainQuiz .ctnFormRetro .reponses span {
+  font-size: 3.5em;
+}
+.mainQuiz .ctnFormRetro .reponses .correct {
+  color: green;
+}
+.mainQuiz .ctnFormRetro .reponses .erreur {
+  color: darkred;
+}
+.mainQuiz .revele {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainQuiz .sectionScore {
+  text-align: center;
+  width: 100%;
+  height: 90%;
+}
+.mainQuiz .sectionScore .ctnScore__score {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.mainQuiz .sectionScore .btnRelancer,
+.mainQuiz .sectionScore .btnResultat {
+  margin: 0.5em 0;
+}
+
+.mainFiche {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .mainFiche {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+}
+.mainFiche .imageZone {
+  margin: 0 0;
+}
+@media (min-width: 600px) {
+  .mainFiche .imageZone {
+    flex: 1 0 100%;
+    width: 30%;
+  }
+}
+.mainFiche .imageZone .zone {
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .mainFiche .imageZone .zone {
+    max-width: 100%;
+  }
+}
+.mainFiche .ctn_fiche {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .mainFiche .ctn_fiche {
+    flex: 1 0 100%;
+    width: 70%;
+  }
+}
+.mainFiche .ctn_fiche .nav {
+  background-color: #3B1F1C;
+  max-width: 100%;
+}
+.mainFiche .ctn_fiche .nav .zoneGeo {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .mainFiche .ctn_fiche .nav .zoneGeo {
+    padding: 1em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
