@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+
+// Les variables générales
+@import "utilitaires/variables";
+
+// Les styles de base 
+@import "base/base";
+
+// Les styles des boutons
+@import "base/boutons";
+
+// Les styles de la page d'accueil
+@import "layout/accueil";
+
+//Les styles de la page "Choisir une zone géographique"
+@import "layout/zone";
+
+// Les style du quiz
+@import "layout/quiz";
+
+// Les styles de la fiche d'un pays
+@import "layout/fiche";

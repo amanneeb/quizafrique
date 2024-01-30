@@ -1,0 +1,88 @@
+.mainQuiz{
+    width: 90%;
+    background-color: #ffffffcb;
+    padding: 1em 1em;
+    @media (min-width: 600px) {
+        height: 60%;
+        margin: auto auto;
+        padding: 2em 2em;
+    }
+    section{
+        width: 100%;
+        @media (min-width: 600px) {
+        }
+    }
+    .instructions{
+        h1{
+            text-align: center;
+        }
+        .btnLancerJeu{
+            margin: auto auto;
+        }
+    }
+    .ctnFormRetro{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        h2{
+            text-transform: uppercase;
+        }
+        .ctnReponse{
+            input{
+                margin-bottom: .5em;
+                height: 45px;
+                text-transform: uppercase;
+                width: 90%;
+                border: none;
+                border-bottom: $marron solid 2px;
+                background-color: transparent;
+                text-align: center;
+                @media (min-width: 600px) {
+                    height: 2em;
+                    width: 40%;
+                }
+            }
+            .avertissement{
+                font-size: .8em;
+                font-style: italic;
+                margin: 0 0 0.3em 0;
+                font-size: .8em;
+            }
+        }
+        
+        .reponses{
+            span{
+                font-size: 3.5em;
+            }
+            
+            .correct{
+                color: green;
+            }
+            .erreur{
+                color: darkred;
+            }
+        }
+    }
+    .revele{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .sectionScore{
+        text-align: center;
+        width: 100%;
+        height: 90%;
+        .ctnScore{
+            &__score{
+                font-size: 1.6em;
+                font-weight: bold;
+            }
+        }
+        .btnRelancer,
+        .btnResultat{
+            margin: .5em 0;
+        }
+    }
+}

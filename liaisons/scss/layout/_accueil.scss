@@ -1,0 +1,49 @@
+
+// Styles de la page d'accueil 
+
+.accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @media (min-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .test, 
+    .pays{
+        background-color: $jaune;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        //height: 50vh;
+        aspect-ratio: 1/1;
+        margin: .5em auto;
+        padding: .3em;
+        @media (min-width: 600px) {
+            //margin: auto auto;
+            //width: 35%;
+            width: 50%;
+            //aspect-ratio: unset;
+            aspect-ratio: 1/1;
+            margin: auto 0.5em;
+        }
+        &__p{
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        button{
+            background-color: $marron;
+            padding: 10px 10px;
+            border: none;
+            a{
+                color: $blanc;
+            }
+        }
+    }
+}

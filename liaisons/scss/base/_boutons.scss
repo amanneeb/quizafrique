@@ -1,0 +1,27 @@
+button{
+    background-color: $marron;
+    color: $blanc;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border: none;
+    &:hover{
+        text-decoration:  underline;
+    }
+    &:active{
+        text-decoration: none;
+        font-weight: bold;
+    }
+    &:focus{
+        border: solid $blanc 1px;
+        outline: solid $blanc 1px;
+        outline-offset: -3px;
+        font-weight: bold;
+    }
+    &:disabled{
+        background-color: #674946;
+        background-color: $blanc;
+        color: $marron;
+        border: $marron solid 1px;
+        text-decoration: line-through;
+    }
+}
