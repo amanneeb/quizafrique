@@ -52,13 +52,9 @@ div a{
     position: relative;
 }
 
-div img{
-    width: 150px;
-}
-@media(min-width: 600px){
-    div img{
-        max-height: 50px;
-    }
+.logo{
+    width: 50px;
+    margin: .5em auto;
 }
 
 h1{
