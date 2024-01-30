@@ -46,6 +46,7 @@ header div{
 /* DISPOSITION LOGO ET MENU DES  */
 .logo{
     width: 50px;
+    margin: .5em auto;
 }
 .fld_cardinaux{
     border: none;
