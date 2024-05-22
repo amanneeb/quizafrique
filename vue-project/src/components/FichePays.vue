@@ -2,8 +2,8 @@
 <template>
     <div class="infoPays">
         <div class="ctn_pays_drapeau">
-            <img class="drapeau" :src="this.refImage+objPays[info].drapeau" width="100px" alt="">
-            <h2 class="pays">{{objPays[info].nom}}</h2>
+            <img class="drapeau" :src="this.refImage+objPays[info].drapeau" width="350px" alt="">
+            <h3 class="pays">{{objPays[info].nom}}</h3>
         </div>
         <div class="ctn_info" >
             <p class="capitale">Capitale: <span class="spanCapitale">{{objPays[info].capitale}}</span></p>
@@ -60,3 +60,22 @@
         }
     }
 </script>
+
+<style scoped>
+    .infoPays{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em 2em auto 2em;
+        height: 100%;
+    }
+    .ctn_pays_drapeau{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pays{
+        text-align: center;
+    }
+</style>

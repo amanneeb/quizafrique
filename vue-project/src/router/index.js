@@ -14,26 +14,26 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue')
     },
-    {
+    /*{
       path: '/pays',
       name: 'pays',
       component: () => import('../views/PaysView.vue')
-    },
+    },*/
     {
       path: '/quiz',
       name: 'quiz',
       component: () => import('../views/QuizView.vue')
     },
     {
-      path: '/fiche',
-      name: 'fiche',
+      path: '/pays',
+      name: 'pays',
       component: () => import('../views/FicheView.vue')
     },
-    /*{
-      path: '/fiche',
-      name: 'fiche',
-      component: () => import('../views/FicheView.vue')
-    },*/
+    {
+      path: '/fichePays/:index',
+      name: 'fichePays',
+      component: () => import('../views/FichePaysView.vue')
+    },
   ]
 })
 

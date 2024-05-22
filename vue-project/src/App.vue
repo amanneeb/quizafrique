@@ -1,83 +1,61 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Footer from './components/Footer.vue'
+  import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/"><img alt="Vue logo" class="logo" src="@/assets/logo_afrique.svg" width="25" height="25" /></RouterLink>
+      <RouterLink @click="changerUrl('')" to="/"><img alt="Vue logo" class="logo" src="@/assets/images/landing_page_image.png" width="50" height="50" /></RouterLink>
+      <nav class="navPrincipale">
+        <RouterLink @click="changerUrl('pays')" to="/pays">Pays</RouterLink>
+        <RouterLink @click="changerUrl('quiz')" to="/quiz">Quiz</RouterLink>
       </nav>
-      <RouterLink to="/pays">Pays</RouterLink>
-      <RouterLink to="/quiz">Quiz</RouterLink>
-    </div>
   </header>
-
   <RouterView />
-  <Footer></Footer>
 </template>
 
-<style scoped>
-/*header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script>
+  export default {
+        components: {
+            
+        },
+        props: {
+            
+        },
+        data() {
+            return {
+                url : "",
+            }
+        },
+        mounted() {
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+        },
+        methods: {
+          changerUrl(nomLien){
+            this.url = nomLien
+          }
+        },
+        computed:{
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+        }, 
+        watch: {
+            url(newValue, oldValue){
+              console.log(oldValue);
+              console.log(newValue);
+              console.log(document.querySelectorAll(".navPrincipale > a"))
+              document.querySelectorAll(".navPrincipale > a").forEach(
+                lien=>{
+                  if(lien.href.indexOf("pageEnCours") != -1){
+                    lien.classList.remove("pageEnCours");
+                  }
+                  if(lien.href.indexOf(this.url) != -1){
+                    console.log(lien)
+                    lien.classList.add("pageEnCours");
+                  }
+                }
+              )
+            }
+        }
+    }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+</script>
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}*/
-</style>

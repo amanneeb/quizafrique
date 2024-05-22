@@ -1,32 +1,32 @@
 <script setup>
-    import FichePays from "@/components/FichePays.vue"
+    import FichePays from "@/components/FichePays.vue";
+    import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
     <main class="mainFiche">
-        <figure class="imageZone">
-            <img class="zone" src="@/assets/images/afrique_centre.jpg" width="300px" alt="">
-            <figcaption class="imageZone__source"></figcaption>
-        </figure>
+        <div class="imageZone imgNord"></div>
         <section class="ctn_fiche">
             <nav class="nav">
                 <ul class="zoneGeo">
-                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Nord')" >Nord</button></li>
-                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Ouest')" >Ouest</button></li>
-                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Centre')" >Centre</button></li>
-                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Est')" >Est</button></li>
-                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Sud')" >Sud</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Nord')">Nord</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Ouest')">Ouest</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Centre')">Centre</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Est')">Est</button></li>
+                    <li class="zoneGeo__item"><button @click="creerListePaysZone('Sud')">Sud</button></li>
                 </ul>
             </nav>
             <div>
                 <fieldset class="fld_select">
-                    <label>Choisir un pays <span class="nomZone"></span></label>
-                    <select @change="modifierValeurPays()" class="listeDeroulante"></select>
+                    <label>Choisir un pays <span class="nomZone"></span></label><br>
+                    <select  @change="modifierValeurPays()" class="listeDeroulante">
+                    </select>
                 </fieldset>
                 <FichePays v-if="this.zoneGeo !=='' && this.valeurPays !==''" :info="this.valeurPays" :objPays="this.pays"></FichePays>
             </div>
         </section>
-    </main>
+    </main>    
+    <Footer></Footer>
 </template>
 
 <script>
@@ -59,7 +59,7 @@
             }
         },
         mounted() {
-            document.querySelector(".listeDeroulante").innerHTML= `<option value=''></option>`;
+            /*document.querySelector(".listeDeroulante").innerHTML= `<option value=''></option>`;*/
             switch(this.zoneEnvoyee){
                 case "nord":
                 document.querySelector(".nomZone").innerHTML="du Nord";
@@ -77,12 +77,12 @@
                 document.querySelector(".nomZone").innerHTML="australe";
                 break;
             }
-            document.querySelector(".zone").src="/src/assets/images/afrique_"+this.zoneEnvoyee+".jpg";
-            for (let intCptDeroulant = 0; intCptDeroulant <= this.pays.length-1; intCptDeroulant++){
+            console.log(this.pays)
+            /*for (let intCptDeroulant = 0; intCptDeroulant <= this.pays.length-1; intCptDeroulant++){
                 if(this.pays[intCptDeroulant].zone.toLowerCase() === this.zoneEnvoyee){
                     document.querySelector(".listeDeroulante").innerHTML += `<option value='${[intCptDeroulant]}'> ${this.pays[intCptDeroulant].nom}</option>`;
                 }
-            }  
+            }  */
             document.getElementById("app").removeAttribute("class");
             localStorage.setItem("background", "vide");
             document.getElementById("app").classList.add(localStorage.getItem("background"))                      
@@ -90,25 +90,52 @@
         methods: {
             modifierValeurPays(){
                 this.valeurPays = document.querySelector(".listeDeroulante").value;
+                console.log(this.valeurPays)
             },
            creerListePaysZone(zone){
                 this.zoneGeo=zone;
+                localStorage.setItem("zone",this.zoneGeo)
                 this.modifierListePays();
+                if(this.zoneGeo == "" || this.zoneGeo == undefined){
+                    this.changerImageLaterale("nord");
+                }else{
+                    this.changerImageLaterale(this.zoneGeo);
+                }
            },
             modifierListePays(){
                 const refZoneGeo = document.querySelector(".listeDeroulante");
                 const refSpanZone = document.querySelector(".nomZone");
+                const refSectionPays = document.querySelector(".sectionPays");
                 refZoneGeo.innerHTML= `<option value=''>Choisir un pays de cette région</option>`;
                 for (let intCptDeroulant = 0; intCptDeroulant <= this.pays.length-1; intCptDeroulant++){
                     if(this.pays[intCptDeroulant].zone === this.zoneGeo){
                         if(refSpanZone.innerHTML === "" || refSpanZone.innerHTML !== this.zoneGeo){
                             refSpanZone.innerHTML = this.pays[intCptDeroulant].localisation;
-                            this.refImage=this.pays[intCptDeroulant].zone.toLowerCase()
-                            document.querySelector(".zone").src="/src/assets/images/afrique_"+this.refImage+".jpg";
                         }
-                        refZoneGeo.innerHTML += `<option value='${[intCptDeroulant]}'> ${this.pays[intCptDeroulant].nom}</option>`;   
+                        if(intCptDeroulant == 0){
+                            refZoneGeo.innerHTML += `<option value='${[intCptDeroulant]}' selected="selected"> ${this.pays[intCptDeroulant].nom}</option>`;  
+                        }else{
+                            refZoneGeo.innerHTML += `<option value='${[intCptDeroulant]}'> ${this.pays[intCptDeroulant].nom}</option>`;  
+                        }
                     }
-                }
+                }                
+            },
+            changerImageLaterale(area){
+                document.querySelector(".imageZone").classList.remove(document.querySelector(".imageZone").classList[1]);
+                document.querySelector(".imageZone").classList.add("img"+area);
+                this.valeurPays='';
+                let arrBoutons= document.querySelectorAll('.zoneGeo li button')
+                document.querySelectorAll('.zoneGeo button').forEach(
+                    bouton=>{
+                        if(bouton.className.indexOf(this.zoneGeo) != -1){
+                            bouton.classList.remove('enCours');
+                        }
+                        if(bouton.innerHTML.toLowerCase() == localStorage.getItem("zone").toLowerCase()){
+                            bouton.classList.add('enCours');
+                            console.log("le bouton cliqué est " + bouton.innerHTML.toLowerCase() + " et la variable zonegeo est " + this.zoneGeo)
+                        }
+                    }
+                )
             }
         },
         computed:{
@@ -119,17 +146,17 @@
                 console.log(newValue)
                 console.log(this.valeurPays)
                 console.log(this.zoneGeo)
-                console.log(this.zone)
+                console.log(this.zoneEnvoyee)
             },
             zoneGeo(newValue){
                 this.valeurPays='';
-                let arrBoutons= document.querySelectorAll('li button')
+                let arrBoutons= document.querySelectorAll('.nav .zoneGeo button')
                 arrBoutons.forEach(
                     bouton=>{
-                        if(bouton.innerText===newValue){
+                        console.log("la nouvelle valeur est: " + this.zoneGeo.toLowerCase())
+                        bouton.classList.remove('enCours');
+                        if(bouton.innerText.toLowerCase() === newValue.toLowerCase()){
                             bouton.classList.add('enCours');
-                        }else{
-                            bouton.classList.remove('enCours');
                         }
                     }
                 )
@@ -138,8 +165,3 @@
     }
 </script>
 
-<style>
-.enCours{
-    border-bottom: black solid 4px;
-}
-</style>

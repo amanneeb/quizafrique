@@ -9,6 +9,7 @@
 }
 html{
     margin: 0;
+    height: 100%;
     font-family: "Poppins", "Tahoma", sans-serif;
     background-image: url(../images/paysage_arbres.jpg);
     background-position: center;
@@ -44,13 +45,14 @@ header{
 }
 
 .logo{
-    width: 150px;
+    width: 50px;
+    margin: .5em auto;
 }
-@media(min-width: 600px){
+/*@media(min-width: 600px){
     .logo{
         width: 50px;
     }
-}
+}*/
 h1{
     color: #1d150b;
     background-color: rgb(255, 255, 255, .8);
