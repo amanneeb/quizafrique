@@ -6,8 +6,8 @@
   <header>
       <RouterLink @click="changerUrl('')" to="/"><img alt="Vue logo" class="logo" src="@/assets/images/landing_page_image.png" width="50" height="50" /></RouterLink>
       <nav class="navPrincipale">
-        <RouterLink @click="changerUrl('pays')" to="/#/pays">Pays</RouterLink>
-        <RouterLink @click="changerUrl('quiz')" to="/#/quiz">Quiz</RouterLink>
+        <RouterLink @click="changerUrl('pays')" to="/pays">Pays</RouterLink>
+        <RouterLink @click="changerUrl('quiz')" to="/quiz">Quiz</RouterLink>
       </nav>
   </header>
   <RouterView />
