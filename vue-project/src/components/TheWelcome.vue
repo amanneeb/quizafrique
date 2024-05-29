@@ -9,8 +9,8 @@
     <h1>Quiz Afrik</h1>
     <p>Un espace ludique pour apprendre et tester tes connaissances sur le continent africain.</p>
     <div class="ctnBoutons">
-      <a href='./quiz'>Démarrer le quiz</a>
-      <a href='./pays'>Découvrir les pays</a>
+      <a href='./#/quiz'>Démarrer le quiz</a>
+      <a href='./#/pays'>Découvrir les pays</a>
     </div>
   </section>
 </main>
