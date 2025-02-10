@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
-
-
-/*** GÉNÉRAL ***/
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Manrope:wght@200..800&display=swap");
 * {
-  font-family: "Manjari", "sans-serif";
   font-family: "Manrope", "sans-serif";
 }
 
@@ -13,334 +8,314 @@ html {
   margin: 0;
   width: 100%;
   height: 100%;
-  color: #3B1F1C;
 }
 html body {
   margin: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 html body #app {
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 @media (min-width: 600px) {
   html body #app {
     height: 100vh;
   }
 }
-
-h1{
-  font-family: "Holtwood One SC";
-  font-size: 85px;
-  color: #3B1F1C;
-}
-h2{
-  font-family: "Manrope";
-  font-weight: 900;
-  font-size: 75px;
-  color: #3B1F1C;
-  text-transform: uppercase;
-}
-h3{
-  font-family: "Manrope";
-  font-weight: 900;
-  font-size: 45px;
-  color: #3B1F1C;
-  text-transform: uppercase;
-}
-
-@media (min-width: 600px) {
-  h1{
-    font-size: 70px;
-  }
-}
-/****/
-
-/** BOUTONS ET LIENS **/
-.bouton{
-  background-color: #3B1F1C;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 300;
-  padding: 16px;
-  border: none;
-  margin: 5px 5px;
-}
-.bouton:hover{
-  background-color: rgba(59, 31, 28, 0.8);
-}
-.bouton:active{
-  transform: scale(.9);
-}
-.bouton:focus{
-  outline: #fff solid 2px;
-  outline-offset: 2px;
-}
-
-.boutonSecondaire{
-  background-color: #fff;
-  color: #3B1F1C;
-  text-transform: uppercase;
-  font-weight: 300;
-  padding: 16px;
-  border: #3B1F1C solid 2px;
-}
-.boutonSecondaire:hover{
-  background-color: rgba(59, 31, 28, 0.2);
-}
-.boutonSecondaire:active{
-  transform: scale(.9);
-}
-.boutonSecondaire:focus{
-  border-width: 4px;
-}
-
-a,
-a:visited{
-  color: #3B1F1C;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
-a:active{
-  font-style: unset;
-  font-weight: bolder;
-  transform: scale(0.9);
-}
-a:focus{
-  border: #3B1F1C solid 3px;
-}
-/****/
-
-
-/**  EN-TÊTE **/
-header{
-  margin: 5px;
-}
-header>a{
-
-}
-header nav{
-  border: #3B1F1C solid 3px;
-  border-radius: 50px;
-  padding: 5px 5px;
-  width: fit-content;
-}
-nav>a{
-  margin: auto 10px;  
-}
-.pageEnCours{
-  /*background-color: #3B1F1C;*/
-  border: #3B1F1C solid 3px;
-  border-radius: 50px;
-  color: #fff;
-}
-@media (min-width: 600px) {
-  header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-/**/
-
-
-/*** PAGE D'ACCUEIL ***/
-.accueil{
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.accueil img{
-  width: 45%;
-}
-.accueil section div{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  text-align: center;
-}
-.accueil section h1{
-  margin-bottom: 0;
-  text-align: center;
-}
-.accueil section p{
-  font-size: 24px;
-  margin-top: 0;
-  text-align: center;
-}
-.accueil section .ctnBoutons{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.accueil section .ctnBoutons a{
-  margin: 10px auto ;
-}
-
-@media (min-width: 600px) {
-  .accueil{
-    padding: 3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .accueil section h1{
-    text-align: right;
-  }
-  .accueil section p{
-    text-align: right;
-  }
-  .accueil section div{
-    text-align: right;
-  }
-  .accueil section .ctnBoutons{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .accueil section .ctnBoutons a{
-    margin: auto 10px;
-  }
-}
-/****/
-
 html body .vide {
   height: fit-content;
 }
 
-.zoneGeo__item button {
-  color: #3B1F1C;
-  background-color: transparent;
+.button {
+  background-color: #3B1F1C;
+  color: #fff;
   text-transform: uppercase;
   padding: 10px 10px;
-  margin: 0 5px;
   border: none;
+  font-weight: bold;
 }
-.zoneGeo__item button:hover {
-  background-color: #3b1f1c50;
+.button:hover {
+  text-decoration: underline;
 }
-button:active {
+.button:active {
   text-decoration: none;
   font-weight: bold;
 }
-.zoneGeo__item .enCours{
-  border-bottom: #ffd000 solid 8px;
-  font-weight:800;
+.button:focus {
+  border: solid #fff 1px;
+  outline: solid #fff 1px;
+  outline-offset: -3px;
+  font-weight: bold;
+}
+.button:disabled {
+  background-color: #674946;
+  background-color: #fff;
+  color: #3B1F1C;
+  border: #3B1F1C solid 1px;
+  text-decoration: line-through;
 }
 
+.boutonSecondaire {
+  background-color: #fff;
+  color: #3B1F1C;
+  border: #3B1F1C solid 1px;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+.boutonSecondaire:hover, .boutonSecondaire:focus {
+  background-color: #ead5d2;
+}
+.boutonSecondaire:active {
+  border: #3B1F1C solid 3px;
+}
 
-/** FICHE - Partie général **/
-.mainFiche{
+header {
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  flex-direction: row;
+  justify-content: space-between;
 }
-@media (min-width: 600px) {
-  .mainFiche{
-    flex-direction: row;
-    justify-content: stretch;
-  }
-}
-.imageZone{
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*height: 150px;
-  width: 100%;*/
-}
-@media(min-width: 600px){
-  .imageZone{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*height: unset;
-    width: unset;*/
-  }
-}
-.imgNord{
-  background-image: url("@/assets/images/afrique_nord.jpg");
-}
-.imgSud{
-  background-image: url("@/assets/images/afrique_sud.jpg");
-}
-.imgCentre{
-  background-image: url("@/assets/images/afrique_centre.jpg");
-}
-.imgOuest{
-  background-image: url("@/assets/images/afrique_ouest.jpg");
-}
-.imgEst{
-  background-image: url("@/assets/images/afrique_est.jpg");
-}
-.fld_select{
-  border: none;
+header .navPrincipale {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 1em;
+  border: #3B1F1C solid 2px;
+  border-radius: 50px;
+  padding: 3px;
 }
-.listeDeroulante{
-  height: 1.5em;
-  font-size: 1.2em;
+header .navPrincipale a {
+  color: #3B1F1C;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: auto 5px;
+}
+header .navPrincipale a:hover {
+  text-decoration: underline;
 }
 
-/****/
-
-/** FICHE - Fiche pays
-
-/****/
-
-
-/** QUIZ - Section instructions **/
-.mainQuiz .instructions div{
-  
+.accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 @media (min-width: 600px) {
-  .mainQuiz{
-    padding: 1em 1em;
-  }
-  .mainQuiz .instructions img{
-    width: 35%;
-  }
-  .mainQuiz .instructions div{
-    display: inline-block;
-    width: 60%;
-    margin: 1em;
+  .accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
-/****/
+.accueil img {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .accueil img {
+    max-width: 50%;
+  }
+}
+.accueil section h1 {
+  color: #3B1F1C;
+  font-family: "Holtwood One SC", "monospace";
+  font-size: xxx-large;
+}
+.accueil section a {
+  text-decoration: none;
+  margin: 5px;
+}
+.accueil .test,
+.accueil .pays {
+  background-color: #FFD000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 0.5em auto;
+  padding: 0.3em;
+}
+@media (min-width: 600px) {
+  .accueil .test,
+  .accueil .pays {
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin: auto 0.5em;
+  }
+}
+.accueil .test__p,
+.accueil .pays__p {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.accueil .test button,
+.accueil .pays button {
+  background-color: #3B1F1C;
+  padding: 10px 10px;
+  border: none;
+}
+.accueil .test button a,
+.accueil .pays button a {
+  color: #fff;
+}
 
+.zone {
+  background: rgba(255, 255, 255, 0.6941176471);
+  color: #3B1F1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .zone {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.zone section {
+  border: #3B1F1C solid 1.5px;
+  aspect-ratio: 1/1;
+  position: relative;
+  width: 50%;
+  margin: 0.5em 0.5em;
+}
+@media (min-width: 600px) {
+  .zone section {
+    width: 30%;
+    aspect-ratio: 1/1;
+  }
+}
+.zone section img {
+  max-width: 100%;
+  display: block;
+}
+.zone section img:hover + div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .zone section div {
+    width: 0;
+    height: 0;
+    display: none;
+    background-color: rgba(255, 208, 0, 0.2784313725);
+  }
+}
+@media (min-width: 600px) {
+  .zone section img:hover + div {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.zone .titre {
+  text-transform: uppercase;
+  text-align: center;
+}
 
-/** QUIZ - Section formulaire **/
-.mainQuiz .ctnFormRetro {
+.mainQuiz {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.7960784314);
+  padding: 1em 1em;
+}
+@media (min-width: 600px) {
+  .mainQuiz {
+    height: 60%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: auto auto;
+    padding: 2em 2em;
+  }
+}
+.mainQuiz section {
+  width: 100%;
+}
+.mainQuiz .instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+@media (min-width: 800px) {
+  .mainQuiz .instructions {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+}
+.mainQuiz .instructions img {
+  max-width: 100%;
+}
+@media (min-width: 800px) {
+  .mainQuiz .instructions img {
+    max-width: 50%;
+    padding-right: 3em;
+  }
+}
+.mainQuiz .instructions h1 {
+  text-align: center;
+}
+.mainQuiz .instructions .btnLancerJeu {
+  margin: auto auto;
+}
+.mainQuiz .questionnaire {
   text-align: center;
   width: 100%;
   height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-.mainQuiz .ctnFormRetro .numQuestion {
+@media (min-width: 600px) {
+  .mainQuiz .questionnaire {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.mainQuiz .questionnaire h1 span {
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 75px;
-  font-weight: 900;
-  background-image: url("../images/cerle_jaune.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  font-size: 3em;
+  background-color: #FFD000;
+  border-radius: 50%;
 }
-.mainQuiz .ctnFormRetro .ctnReponse input {
+@media (min-width: 600px) {
+  .mainQuiz .questionnaire h1 {
+    flex: 1 0 40%;
+  }
+}
+.mainQuiz .questionnaire .ctnQuiz form {
+  padding-bottom: 2em;
+}
+.mainQuiz .questionnaire .ctnQuiz form .ctnReponse input {
   margin-bottom: 0.5em;
   height: 45px;
   text-transform: uppercase;
@@ -350,104 +325,65 @@ button:active {
   background-color: transparent;
   text-align: center;
 }
-.mainQuiz .ctnFormRetro .ctnReponse .avertissement {
+@media (min-width: 600px) {
+  .mainQuiz .questionnaire .ctnQuiz form .ctnReponse input {
+    height: 2em;
+    width: 40%;
+  }
+}
+.mainQuiz .questionnaire .ctnQuiz form .ctnReponse .avertissement {
   font-size: 0.8em;
   font-style: italic;
   margin: 0 0 0.3em 0;
   font-size: 0.8em;
 }
-.mainQuiz .ctnFormRetro .reponses span {
+.mainQuiz .questionnaire .reponses span {
   font-size: 3.5em;
-  color: rgb(59, 31, 28, .8);
 }
-.mainQuiz .ctnFormRetro .reponses .correct {
+.mainQuiz .questionnaire .reponses .correct {
   color: green;
 }
-.mainQuiz .ctnFormRetro .reponses .erreur {
+.mainQuiz .questionnaire .reponses .erreur {
   color: darkred;
 }
-
-@media (min-width: 600px) {
-  .mainQuiz .ctnFormRetro .ctnReponse input {
-    height: 2em;
-    width: 40%;
-  }
-  .mainQuiz .ctnFormRetro .numQuestion {
-    font-size: 200px;
-    margin-right: 10px;
-  }
-}
-
-/*Activer le display flex*/
 .mainQuiz .revele {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-
-@media(min-width: 600px){
-  .mainQuiz .reveleBis {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }  
-  .reveleBis>span{
-    flex: 0 1 30%;
-  }
-  .reveleBis>div{
-    flex: 1 0 70%;
-  }
-}
-
-
-/***/
-
-
-/** QUIZ - Section résultats **/
 .mainQuiz .sectionScore {
   text-align: center;
   width: 100%;
   height: 90%;
 }
+@media (min-width: 600px) {
+  .mainQuiz .sectionScore .ctnScore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .mainQuiz .sectionScore .ctnScore__score {
-  font-size: 1.6em;
+  line-height: 2.5em;
+  width: fit-content;
+  aspect-ratio: 1/1;
+  font-size: 5em;
+  background-color: #FFD000;
+  border-radius: 50%;
   font-weight: bold;
+  margin: auto;
 }
 .mainQuiz .sectionScore .btnRelancer,
 .mainQuiz .sectionScore .btnResultat {
   margin: 0.5em 0;
 }
-
-@media (min-width: 600px) {
-  .mainQuiz .sectionScore .ctnScore__score{
-    background-image: url("../images/cerle_jaune.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 90px;
-    margin: 10px auto;
-  }
-  .mainQuiz .sectionScore h2 {
-    
-  }
+.mainQuiz .correct {
+  color: green;
 }
-
-/***/
-
-
-
-.mainQuiz section {
-  width: 100%;
+.mainQuiz .incorrect {
+  color: darkred;
 }
-.mainQuiz .instructions h1 {
-  text-align: center;
-}
-.mainQuiz .instructions .btnLancerJeu {
-  margin: auto auto;
-}
-
 
 .mainFiche {
   height: 100%;
@@ -459,62 +395,156 @@ button:active {
 }
 @media (min-width: 600px) {
   .mainFiche {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100vh;
   }
 }
-.mainFiche .imageZone {
-  margin: 0 0;
+.mainFiche .ctnImgZone {
+  background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1 0 30%;
+  align-self: stretch;
+  grid-row: 1/span 6;
+  grid-column: 1/span 1;
 }
 @media (min-width: 600px) {
-  .mainFiche .imageZone {
-    flex: 1 0 100%;
-    width: 30%;
+  .mainFiche .ctnImgZone {
+    background-image: url("src/assets/images/afrique_nord_table.jpg");
   }
 }
-.mainFiche .imageZone .zone {
+.mainFiche .ctnImgZone--nord {
+  background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnImgZone--nord {
+    background-image: url("src/assets/images/afrique_nord_table.jpg");
+  }
+}
+.mainFiche .ctnImgZone--ouest {
+  background-image: url("src/assets/images/afrique_ouest_mobile.jpg");
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnImgZone--ouest {
+    background-image: url("src/assets/images/afrique_ouest_table.jpg");
+  }
+}
+.mainFiche .ctnImgZone--centre {
+  background-image: url("src/assets/images/afrique_centre_mobile.jpg");
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnImgZone--centre {
+    background-image: url("src/assets/images/afrique_centre_table.jpg");
+  }
+}
+.mainFiche .ctnImgZone--est {
+  background-image: url("src/assets/images/afrique_est.jpg");
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnImgZone--est {
+    background-image: url("src/assets/images/afrique_est_table.jpg");
+  }
+}
+.mainFiche .ctnImgZone--sud {
+  background-image: url("src/assets/images/afrique_sud.jpg");
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnImgZone--sud {
+    background-image: url("src/assets/images/afrique_sud_table.jpg");
+  }
+}
+.mainFiche .ctnListeDeroulante {
+  border: none;
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnListeDeroulante {
+    grid-row: 1/span 1;
+    grid-column: 3/span 1;
+  }
+}
+.mainFiche .ctnListeDeroulante label {
+  text-transform: uppercase;
+}
+.mainFiche .ctnPrincipal {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnPrincipal {
+    grid-column: 2/span 2;
+  }
+}
+.mainFiche .ctnPrincipal .ctnFiche {
+  overflow-y: auto;
+  padding-left: 10px;
+}
+.mainFiche .ctnPrincipal .ctnFiche img {
+  max-width: 80%;
+}
+@media (min-width: 600px) {
+  .mainFiche .ctnPrincipal .ctnFiche img {
+    width: 200px;
+  }
+}
+.mainFiche .ctnPrincipal .ctnFiche .ctnInfo h2 {
+  font-size: medium;
+}
+
+footer {
+  text-align: center;
+}
+@media (min-width: 600px) {
+  footer {
+    grid-row: 7/span 1;
+    grid-column: 1/span 6;
+  }
+}
+
+.nav {
+  background-color: white;
   width: 100%;
 }
 @media (min-width: 600px) {
-  .mainFiche .imageZone .zone {
-    max-width: 100%;
+  .nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    grid-row: 1/span 1;
+    grid-column: 2/span 2;
   }
 }
-.mainFiche .ctn_fiche {
-  max-width: 100%;
-}
-@media (min-width: 600px) {
-  .mainFiche .ctn_fiche {
-    flex: 1 0 100%;
-    width: 70%;
-  }
-}
-.mainFiche .ctn_fiche .nav {
-  max-width: 100%;
-}
-.mainFiche .ctn_fiche .nav .zoneGeo {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+.nav .zoneGeo {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
 }
-@media (min-width: 600px) {
-  .mainFiche .ctn_fiche .nav .zoneGeo {
-    padding: 1em;
-  }
+.nav .zoneGeo__item {
+  width: fit-content;
 }
-
-
-/**  PIED DE PAGE **/
-footer{
-  text-align: center;
+.nav .zoneGeo__item--active {
+  border-bottom: solid 5px #FFD000;
 }
-
-/**/
+.nav .zoneGeo__item button {
+  background-color: transparent;
+  color: #3B1F1C;
+  border: solid 1px #3B1F1C;
+  padding: 0.8em;
+  margin: 5px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav .zoneGeo__item button:hover {
+  background-color: #ead5d2;
+  color: #3B1F1C;
+}
 
 /*# sourceMappingURL=styles.css.map */

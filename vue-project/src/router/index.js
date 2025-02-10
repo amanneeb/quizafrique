@@ -1,10 +1,7 @@
 import { createRouter, createWebHistory/*, createWebHashHistory*/ } from 'vue-router'
 import AccueilView from '../views/AccueilView.vue'
-import QuizView from '../views/QuizView.vue'
-import FicheView from '../views/FicheView.vue'
 
 const router = createRouter({
-  //history: createWebHashHistory(import.meta.env.BASE_URL),
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -15,14 +12,12 @@ const router = createRouter({
     {
       path: '/quiz',
       name: 'quiz',
-      //component: () => import('../views/QuizView.vue'),
-      component: QuizView
+      component: () => import('../views/QuizView.vue')
     },
     {
       path: '/pays',
       name: 'pays',
-     // component: () => import('../views/FicheView.vue'),
-      component: FicheView
+      component: () => import('../views/FicheView.vue')
     },
     {
       path: '/fichePays/:index',

@@ -2,17 +2,17 @@
 <template>
     <div class="infoPays">
         <div class="ctn_pays_drapeau">
-            <img class="drapeau" :src="this.refImage+objPays[info].drapeau" width="350px" alt="">
-            <h3 class="pays">{{objPays[info].nom}}</h3>
+            <img class="drapeau"  width="350px" alt="">
+            <h3 class="pays">{{}}</h3>
         </div>
         <div class="ctn_info" >
-            <p class="capitale">Capitale: <span class="spanCapitale">{{objPays[info].capitale}}</span></p>
-            <p class="villesSecondaires">Ville(s) secondaire(s): <span class="spanVillesSecondaires">{{objPays[info].villesSecondaires}}</span></p>
-            <p class="population">Population: <span class="spanPopulation">{{objPays[info].population}}</span> hab</p>
-            <p class="langues">Langues: <span class="spanLangues">{{objPays[info].langues}}</span></p>
-            <p class="monnaie">Monnaie: <span class="spanMonnaie">{{objPays[info].monnaie}}</span></p>
-            <p class="description" >Description:</p> <p class="spanDescription" v-if="objPays" v-html="objPays[info].description"></p>
-            <p class="sources">Sources: <span class="spanSources">{{objPays[info].sources}}</span></p>
+            <p class="capitale">Capitale: <span class="spanCapitale">{{}}</span></p>
+            <p class="villesSecondaires">Ville(s) secondaire(s): <span class="spanVillesSecondaires">{{}}</span></p>
+            <p class="population">Population: <span class="spanPopulation">{{}}</span> hab</p>
+            <p class="langues">Langues: <span class="spanLangues"></span></p>
+            <p class="monnaie">Monnaie: <span class="spanMonnaie"></span></p>
+            <p class="description" >Description:</p> <p class="spanDescription" ></p>
+            <p class="sources">Sources: <span class="spanSources">{{}}</span></p>
         </div>
     </div>
 </template>

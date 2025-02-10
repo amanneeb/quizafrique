@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Manrope:wght@200..800&display=swap');
 
 // Les variables générales
 @import "utilitaires/variables";
@@ -21,3 +21,9 @@
 
 // Les styles de la fiche d'un pays
 @import "layout/fiche";
+
+// Les styles du footer
+@import "layout/footer";
+
+// Les styles de la navigation
+@import "modules/navZone";

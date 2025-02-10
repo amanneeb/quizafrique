@@ -16,7 +16,7 @@
                     <li class="zoneGeo__item"><button @click="creerListePaysZone('Sud')">Sud</button></li>
                 </ul>
             </nav>
-            <div>
+            <div class="corpsFiche">
                 <fieldset class="fld_select">
                     <label>Choisir un pays <span class="nomZone"></span></label><br>
                     <select  @change="modifierValeurPays()" class="listeDeroulante">
@@ -59,7 +59,6 @@
             }
         },
         mounted() {
-            /*document.querySelector(".listeDeroulante").innerHTML= `<option value=''></option>`;*/
             switch(this.zoneEnvoyee){
                 case "nord":
                 document.querySelector(".nomZone").innerHTML="du Nord";
@@ -77,12 +76,6 @@
                 document.querySelector(".nomZone").innerHTML="australe";
                 break;
             }
-            console.log(this.pays)
-            /*for (let intCptDeroulant = 0; intCptDeroulant <= this.pays.length-1; intCptDeroulant++){
-                if(this.pays[intCptDeroulant].zone.toLowerCase() === this.zoneEnvoyee){
-                    document.querySelector(".listeDeroulante").innerHTML += `<option value='${[intCptDeroulant]}'> ${this.pays[intCptDeroulant].nom}</option>`;
-                }
-            }  */
             document.getElementById("app").removeAttribute("class");
             localStorage.setItem("background", "vide");
             document.getElementById("app").classList.add(localStorage.getItem("background"))                      

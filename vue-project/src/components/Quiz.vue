@@ -5,7 +5,7 @@
 <template>
     <main class="mainQuiz">
         <section class="instructions">
-            <img src="@/assets/images/landing_page_image.png"  alt="Dessin du continent africain avec une girafe et un arbre devant coucher de soleil">
+            <img class="im" src="@/assets/images/landing_page_image.png"  alt="Dessin du continent africain avec une girafe et un arbre devant coucher de soleil">
             <div>
                 <h2>Bienvenue! </h2>
                 <p>Prends quelques secondes pour lire les instructions et tu pourras ensuite commencer le test. </p>
@@ -18,19 +18,19 @@
                 </ol>
                 <p>Besoin d'un petit coup de pouce? Tu peux ouvrir la page <a class="lienPays" href="/pays">"Pays"</a> pour t'aider.</p>
                 <p>Amuse-toi bien! &#128521;</p>
-                <button type="button" class="btnLancerJeu bouton" @click="choisirPays()" >Lancer le jeu</button>
+                <button type="button" class="btnLancerJeu button" @click="choisirPays()" >Lancer le jeu</button>
             </div>
         </section>         
     
         <section class="ctnFormRetro" hidden>
-            <!--<h2 class="titreQuiz">--><span class="numQuestion">{{this.intCptQuestion}}</span><!--</h2>-->
+            <span class="numQuestion">{{this.intCptQuestion}}</span>
             <div class="ctnLayoutForm">
                 <form class="form">
                 <p class="indice">{{this.indice}}</p>
                 <div class="ctnReponse">
                     <input type="text" class="reponse" v-model="laReponse">
                     <p class="avertissement"> * Le correcteur est sensible au accent</p>
-                    <button type="button" class="btnRepondre bouton" @click="verifierReponse()">Répondre</button>
+                    <button type="button" class="btnRepondre button" @click="verifierReponse()">Répondre</button>
                 </div>
                 </form>
                 <p class="retroaction" hidden>{{ this.retroaction }}</p>

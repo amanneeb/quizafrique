@@ -1,9 +1,10 @@
-button{
+.button{
     background-color: $marron;
     color: $blanc;
     text-transform: uppercase;
     padding: 10px 10px;
     border: none;
+    font-weight: bold;
     &:hover{
         text-decoration:  underline;
     }
@@ -23,5 +24,21 @@ button{
         color: $marron;
         border: $marron solid 1px;
         text-decoration: line-through;
+    }
+}
+.boutonSecondaire{
+    background-color: $blanc;
+    color: $marron;
+    border: $marron solid 1px;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    font-weight: bold;
+    &:hover,
+    &:focus{
+        background-color: lighten($marron, 70%);
+        
+    }
+    &:active{
+        border: $marron solid 3px;
     }
 }

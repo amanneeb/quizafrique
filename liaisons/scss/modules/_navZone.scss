@@ -1,0 +1,44 @@
+.nav{
+    
+    background-color: white;
+    width: 100%;
+    @media(min-width: 600px){
+        position: sticky;
+        top: 0;
+        right: 0;
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 2;
+    }
+    .zoneGeo{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0;
+        list-style-type: none;
+        &__item{
+            width: fit-content;
+            &--active{
+                border-bottom: solid 5px $jaune;
+            }
+            button{
+                background-color: transparent;
+                color: $marron;
+                border: solid 1px $marron;
+                padding: 0.8em;
+                margin: 5px;
+                text-transform: uppercase;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    background-color: lighten($marron, 70%);
+                    color: $marron;
+                    
+                }
+            }
+        }
+    }
+}

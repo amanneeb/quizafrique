@@ -1,5 +1,6 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
+  
 </script>
 
 <template>
@@ -39,16 +40,12 @@
         }, 
         watch: {
             url(newValue, oldValue){
-              console.log(oldValue);
-              console.log(newValue);
-              console.log(document.querySelectorAll(".navPrincipale > a"))
               document.querySelectorAll(".navPrincipale > a").forEach(
                 lien=>{
                   if(lien.href.indexOf("pageEnCours") != -1){
                     lien.classList.remove("pageEnCours");
                   }
                   if(lien.href.indexOf(this.url) != -1){
-                    console.log(lien)
                     lien.classList.add("pageEnCours");
                   }
                 }
