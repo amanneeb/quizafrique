@@ -14,7 +14,7 @@
 
     //Affichage de l'image d'illustration de la zone géographique
     .ctnImgZone{
-        background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+        background-image: url("images/afrique_nord_mobile.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -23,36 +23,36 @@
         grid-row: 1 / span 6;
         grid-column: 1 / span 1;
         @media(min-width: 600px){
-            background-image: url("src/assets/images/afrique_nord_table.jpg");
+            background-image: url("images/afrique_nord_table.jpg");
         }
         &--nord{
-            background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+            background-image: url("images/afrique_nord_mobile.jpg");
             @media(min-width: 600px){
-                background-image: url("src/assets/images/afrique_nord_table.jpg");
+                background-image: url("images/afrique_nord_table.jpg");
             }
         }
         &--ouest{
-            background-image: url("src/assets/images/afrique_ouest_mobile.jpg");
+            background-image: url("images/afrique_ouest_mobile.jpg");
             @media(min-width: 600px){
-                background-image: url("src/assets/images/afrique_ouest_table.jpg");
+                background-image: url("images/afrique_ouest_table.jpg");
             }
         }
         &--centre{
-            background-image: url("src/assets/images/afrique_centre_mobile.jpg");
+            background-image: url("images/afrique_centre_mobile.jpg");
             @media(min-width: 600px){
-                background-image: url("src/assets/images/afrique_centre_table.jpg");
+                background-image: url("images/afrique_centre_table.jpg");
             }
         }
         &--est{
-            background-image: url("src/assets/images/afrique_est.jpg");
+            background-image: url("images/afrique_est.jpg");
             @media(min-width: 600px){
-                background-image: url("src/assets/images/afrique_est_table.jpg");
+                background-image: url("images/afrique_est_table.jpg");
             }
         }
         &--sud{
-            background-image: url("src/assets/images/afrique_sud.jpg");
+            background-image: url("images/afrique_sud.jpg");
             @media(min-width: 600px){
-                background-image: url("src/assets/images/afrique_sud_table.jpg");
+                background-image: url("images/afrique_sud_table.jpg");
             }
         }
     }

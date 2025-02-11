@@ -402,7 +402,7 @@ header .navPrincipale a:hover {
   }
 }
 .mainFiche .ctnImgZone {
-  background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+  background-image: url("images/afrique_nord_mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -413,47 +413,47 @@ header .navPrincipale a:hover {
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone {
-    background-image: url("src/assets/images/afrique_nord_table.jpg");
+    background-image: url("images/afrique_nord_table.jpg");
   }
 }
 .mainFiche .ctnImgZone--nord {
-  background-image: url("src/assets/images/afrique_nord_mobile.jpg");
+  background-image: url("images/afrique_nord_mobile.jpg");
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone--nord {
-    background-image: url("src/assets/images/afrique_nord_table.jpg");
+    background-image: url("images/afrique_nord_table.jpg");
   }
 }
 .mainFiche .ctnImgZone--ouest {
-  background-image: url("src/assets/images/afrique_ouest_mobile.jpg");
+  background-image: url("images/afrique_ouest_mobile.jpg");
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone--ouest {
-    background-image: url("src/assets/images/afrique_ouest_table.jpg");
+    background-image: url("images/afrique_ouest_table.jpg");
   }
 }
 .mainFiche .ctnImgZone--centre {
-  background-image: url("src/assets/images/afrique_centre_mobile.jpg");
+  background-image: url("images/afrique_centre_mobile.jpg");
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone--centre {
-    background-image: url("src/assets/images/afrique_centre_table.jpg");
+    background-image: url("images/afrique_centre_table.jpg");
   }
 }
 .mainFiche .ctnImgZone--est {
-  background-image: url("src/assets/images/afrique_est.jpg");
+  background-image: url("images/afrique_est.jpg");
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone--est {
-    background-image: url("src/assets/images/afrique_est_table.jpg");
+    background-image: url("images/afrique_est_table.jpg");
   }
 }
 .mainFiche .ctnImgZone--sud {
-  background-image: url("src/assets/images/afrique_sud.jpg");
+  background-image: url("images/afrique_sud.jpg");
 }
 @media (min-width: 600px) {
   .mainFiche .ctnImgZone--sud {
-    background-image: url("src/assets/images/afrique_sud_table.jpg");
+    background-image: url("images/afrique_sud_table.jpg");
   }
 }
 .mainFiche .ctnListeDeroulante {
